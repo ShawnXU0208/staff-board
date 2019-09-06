@@ -1,0 +1,1068 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+  font-family:"CM-Tattoo-Dragon";
+  src: url("../assets/fonts/cmtattoodragon.ttf") format("truetype");
+}
+
+body{
+    font-size: 15px;
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei;
+    margin: 0px;
+    padding: 0px;
+}
+
+body button{
+    outline: none;
+}
+
+body button:focus{
+    outline: none;
+}
+
+body input{
+    outline: none;
+}
+
+body input:focus{
+    outline: none;
+}
+
+.textstyle-1{
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.textstyle-2{
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.textstyle-3{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.textstyle-4{
+    color: #cccccc;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.textstyle-5{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.textstyle-6{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.textstyle-7{
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.textstyle-8{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#app{
+    margin: 0px;
+    height: 100%;
+    min-height: 800px;
+}
+
+.app-header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ededed;
+    color: black;
+    border-bottom: 2px solid #fbfbfb;
+    height: 80px;
+    z-index: 5;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px 20px 20px;
+}
+
+.app-header .page-btn{
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+}
+
+.app-header .page-btn img{
+    width: 20px;
+}
+
+.app-header .back-button{
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+}
+
+.app-header .back-button img{
+    width: 20px;
+}
+
+
+
+
+.app-body{
+    position: relative;
+    top: 80px;
+}
+
+.app-footer{
+    position: fixed;
+    top: 87vh;
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    border-top: 2px solid #f5f5f5;
+    background-color: white;
+    z-index: 5;
+    padding-top: 20px;
+}
+
+.app-footer button{
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: none;
+}
+
+.app-footer button img{
+    width: 25px;
+}
+
+.app-contents{
+    width: 100%;
+    padding: 110px 20px 120px 20px;
+}
+
+#app.home-page-view{
+    background-image: linear-gradient(to top, #ff8faf, #f78aa9, #ee84a2, #e67f9c, #de7a96);
+}
+
+#app.weekly-info-view{
+  display: none;
+}
+
+
+
+
+
+
+#app.alerts-page-view .alerts-list{
+    margin-top: 0px !important;
+}
+
+#app.alerts-page-view .alerts-list .sub-title{
+    color: #9c9c9c;
+    margin-top: 20px;
+}
+
+.app-contents.add-alert.regular .days-select{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.app-contents.add-alert.regular .days-select .eng-name{
+    color: #DE7A96;
+    text-align: center;
+}
+
+.app-contents.add-alert.regular .days-select button{
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+    border: 2px solid #FF8FAF;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border-radius: 50%;
+}
+
+.app-contents.add-alert.regular .day-item button.active{
+    background-color: #FF8FAF;
+    border: none;
+    color: white;
+}
+
+
+.app-contents.add-alert textarea{
+    width: 100%;
+    border-radius: 25px;
+    border: 3px solid #FF8FAF;
+    padding: 5px 10px;
+    outline: none;
+    margin-top: 15px;
+}
+
+.app-footer.add-alert button{
+    background: none;
+    border: none;
+}
+
+.app-footer.add-alert button img{
+    height: 20px;
+}
+
+.app-footer.add-alert button p{
+    color: #818181;
+    margin-top: 3px;
+}
+
+.app-footer.add-alert #add-button{
+    height: 60px;
+    width: 60px;
+    background-color: #2abfff;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    top: -30px;
+}
+
+.app-footer.add-alert #add-button img{
+    width: 15px;
+}
+
+.block-area.add-alert{
+    width: 100%;
+    position: fixed;
+    top: 616px;
+    height: 40px;
+    z-index: 4;
+    background-color: white;
+}
+
+.app-contents.alerts-display .alert-item{
+    padding: 15px 20px 10px 20px;
+    margin-top: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.app-contents.alerts-display .alert-item:nth-child(3n+1){
+    background-color: #ffe5e7;
+    color: #e86d7a;
+}
+
+.app-contents.alerts-display .alert-item:nth-child(3n+2){
+    background-color: #d9f9f5;
+    color: #7fc7bf;
+}
+
+.app-contents.alerts-display .alert-item:nth-child(3n+3){
+    background-color: #edeaff;
+    color: #9b91d9;
+}
+
+.app-contents.alerts-display .alert-item:nth-child(3n+1) .alert-content{
+    color: #e34050;
+}
+
+.app-contents.alerts-display .alert-item:nth-child(3n+2) .alert-content{
+    color: #37e6d0;
+}
+
+.app-contents.alerts-display .alert-item:nth-child(3n+3) .alert-content{
+    color: #6854e3;
+}
+
+.app-contents.alerts-display .alert-item:nth-child(3n+1) .alert-dates img{
+    content:url("../img/icons/calendarPINK.svg");
+}
+
+.app-contents.alerts-display .alert-item:nth-child(3n+2) .alert-dates img{
+    content:url("../img/icons/calendarGREEN.svg");
+}
+
+.app-contents.alerts-display .alert-item:nth-child(3n+3) .alert-dates img{
+    content:url("../img/icons/calendarPURPLE.svg");
+}
+
+.app-contents.alerts-display .alert-item:nth-child(3n+1) .alert-times img{
+    content:url("../img/icons/clockPINK.svg");
+}
+
+.app-contents.alerts-display .alert-item:nth-child(3n+2) .alert-times img{
+    content:url("../img/icons/clockGREEN.svg");
+}
+
+.app-contents.alerts-display .alert-item:nth-child(3n+3) .alert-times img{
+    content:url("../img/icons/clockPURPLE.svg");
+}
+
+.app-contents.alerts-display .alert-item:nth-child(3n+1) .alert-bottom .alert-remove{
+    content:url("../img/icons/garbagePINK.svg");
+}
+
+.app-contents.alerts-display .alert-item:nth-child(3n+2) .alert-bottom .alert-remove{
+    content:url("../img/icons/garbageGREEN.svg");
+}
+
+.app-contents.alerts-display .alert-item:nth-child(3n+3) .alert-bottom .alert-remove{
+    content:url("../img/icons/garbagePURPLE.svg");
+}
+
+.app-contents.alerts-display .alert-item .alert-content{
+    margin-bottom: 20px;
+}
+
+.app-contents.alerts-display .alert-item .alert-dates{
+    height: 20px;
+}
+
+.app-contents.alerts-display .alert-item .alert-dates img, .app-contents.alerts-display .alert-item .alert-times img{
+    width: 15px;
+    margin-right: 10px;
+}
+
+.app-contents.alerts-display .alert-item .alert-bottom{
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.app-contents.alerts-display .alert-item .alert-bottom .alert-staff{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.app-contents.alerts-display .alert-item .alert-bottom .alert-remove{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 5px;
+    right: -10px;
+}
+
+
+
+
+
+
+
+
+#staff-list .staff{
+    width: 90%;
+    height: 65px;
+    border-radius: 20px;
+    background-color: white;
+    margin: auto;
+    margin-top: 18px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#staff-list .staff .avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#staff-list .staff .english-name{
+    display: block;
+    position: absolute;
+    left: 70px;
+    top: 15%;
+}
+
+#staff-list .staff .chinese-name{
+    display: block;
+    position: absolute;
+    left: 70px;
+    top: 55%;
+}
+
+#staff-list .staff .status-dot{
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+
+#staff-list .staff .modify-profile{
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.staff-info-form{
+    width: 100%;
+    background-color: white;
+    border-radius: 30px;
+    margin: auto;
+    padding: 50px 0px 30px 0px;
+    position: relative;
+    margin-top: 80px;
+}
+
+.staff-info-form .avatar-display{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: 50%;
+    top: 0px;
+    transform: translate(-50%, -50%);
+}
+
+.staff-info-form .avatar-change{
+    position: absolute;
+    width: 30px;
+    left: 60%;
+    top: 5%;
+    transform: translate(-60%, 0%);
+}
+
+#select-avatars-modal{
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    padding-top: 100px;
+    z-index: 1;
+
+    background-color: rgba(0,0,0,0.6);
+
+}
+
+#select-avatars-modal .my-modal-content{
+    width: 80%;
+    margin: auto;
+    background-color: white;
+}
+
+#select-avatars-modal .my-modal-content .my-modal-header{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    color: white;
+    line-height: 60px;
+
+    background-color: #3cb6e3;
+}
+
+#select-avatars-modal .my-modal-content .my-modal-body{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 10px 0px;
+
+}
+
+#select-avatars-modal .my-modal-content .my-modal-body img{
+    width: 60px;
+    height: 60px;
+    margin: 10px 10px;
+}
+
+#select-avatars-modal .my-modal-content .my-modal-footer{
+    width: 100%;
+    height: 90px;
+    border-top: 1px solid lightgrey;  
+    padding: 10px 0px;
+
+    display: flex; 
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#select-avatars-modal .my-modal-content .my-modal-footer button{
+    width: 100px;
+    height: 50px;
+    margin: 10px 10px;
+    padding: 10px 20px;
+    color: white;
+
+    border: none;
+    background: none;
+}
+
+#select-avatars-modal .my-modal-content .my-modal-footer #local-album-button{
+    background-color: #3cb6e3;
+}
+
+#select-avatars-modal .my-modal-content .my-modal-footer #cancel-button{
+    border: 2px solid #3cb6e3;
+    color: #3cb6e3;
+}
+
+
+
+.staff-info-form label{
+    display: block;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+.staff-info-form input{
+    display: block;
+    width: 90%;
+    margin: auto;
+    border: none;
+    border-radius: 30px;
+    background-color: #e1e4e8;
+    height: 50px;
+    margin-top: 10px;
+    color: #b2b4b8;
+    padding-left: 30px;
+
+}
+
+.staff-info-form button{
+    display: block;
+    width: 90%;
+    margin: auto;
+    border: none;
+    border-radius: 30px;
+    height: 50px;
+    margin-top: 20px;   
+    color: white;
+}
+
+.staff-info-form #add-new-staff-button{
+    background: #24C6DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.staff-info-form .cancel-button{
+    background: #757F9A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.staff-info-form #delete-staff-button{
+    background: #e43a15;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e65245, #e43a15);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e65245, #e43a15); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.staff-info-form button:first-of-type{
+    margin-top: 70px;
+}
+
+.add-staff-form{
+    height: 600px;
+}
+
+.modify-staff-form{
+    height: 680px;
+}
+
+
+.home-header{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-top: 0px;
+
+
+
+/*
+    background: #141E30;  
+    background: -webkit-linear-gradient(to right, #243B55, #141E30); 
+    background: linear-gradient(to right, #243B55, #141E30);
+    background-repeat: no-repeat;
+    background-size: cover;
+*/
+
+}
+
+.home-header .week-day{
+    width: 70px;
+    position: absolute;
+    top: 27%;
+    left: 20px;
+}
+
+.home-header .date{
+    font-family: 'Helvetica Neue', monospace;
+    font-size: 25px;
+    font-weight: 900;
+    color: white;
+    display: block;
+    position: absolute;
+    top: 27%;
+    left: 110px;
+}
+
+.home-header .weather{
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 13px;
+    font-weight: 200;
+    color: #d1d1d1;
+    display: block;
+    position: absolute;
+    top: 42%;
+    left: 110px; 
+}
+
+.home-header hr{
+    border: 1px solid #d1d1d1;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 85%;
+
+}
+
+.home-header .staff-today{
+    position: absolute;
+    top: 64%;
+    padding: 13px 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+.home-header .staff-today .staff{
+    display: inline-block;
+    width: 55px;
+    position: relative;
+    margin: 0px 5px;
+}
+
+.home-header .staff-today .staff-avatar{
+    width: 100%;
+    position: relative;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+
+.home-header .staff-today .staff-avatar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home-header .staff-today .staff-status{
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translate(-50%, 0%);   
+
+    background-color: #11d11a;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 14px;
+}
+
+.home-header .staff-today .staff-status.finished{
+    background-color: #adadad;
+}
+
+.home-control-panel{
+    height: 140px;
+    padding: 0px 20px 20px 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+
+/*
+    background: #141E30;  
+    background: -webkit-linear-gradient(to right, #243B55, #141E30); 
+    background: linear-gradient(to right, #243B55, #141E30); 
+    background-repeat: no-repeat;
+    background-size: cover;
+*/
+}
+
+.home-control-panel .staff-button{
+    height: 110px;
+    position: relative;
+}
+
+.home-control-panel .staff-button button{
+    width: 100px;
+    height: 80px;
+    border: none;
+    border-radius: 10px;
+    background-color: #eda8bd;
+
+/*
+    background: #457fca;  
+    background: -webkit-linear-gradient(to top, #5691c8, #457fca);  
+    background: linear-gradient(to top, #5691c8, #457fca); 
+    background-repeat: no-repeat;
+    background-size: cover;
+*/
+
+}
+
+.home-control-panel .staff-button button img{
+    width: 40px;
+}
+
+.home-control-panel .staff-button p{
+    color: #bfbfbf;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -100%);    
+}
+
+
+.home-body{
+    background-color: white;
+    border-radius: 40px 40px 0 0;
+    width: 100%;
+    padding: 20px 15px 80px 20px;
+}
+
+
+
+
+.alert-panel{
+    width: 95%;
+    margin: auto;
+    margin-top: 40px;
+    padding-bottom: 30px;
+}
+
+.alert-panel .alert-item{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.alert-panel .alert-item .avatar{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.alert-panel .alert-item .alert-body{
+    width: 88%;
+    border: 1px solid #e5e7ea;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+
+.alert-panel .alert-item .alert-body .alert-created-person{
+    color: #a8b1c0;
+}
+
+
+
+.alert-panel .alert-item .alert-body .alert-edit{
+    width: 25px;
+    float: right;
+}
+
+.note-panel{
+    width: 100%;
+    padding: 20px 20px 5px 20px;
+    margin-top: 20px;
+    box-shadow: inset 0px 0px 11px -2px rgba(222,122,150,0.65);
+
+    border-radius: 20px;
+    background-color: white;
+
+}
+
+
+.note-panel #note-text{
+    width: 100%;
+    color: #878787;
+    border: none;
+    background: none;
+    outline: none;
+    min-height: 50px;
+    resize: none;
+}
+
+.note-panel .note-buttons{
+    padding: 15px 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.note-panel .note-buttons button{
+    width: 120px;
+    height: 50px;
+    border: none;
+    background: none;
+    border-radius: 8px;
+}
+
+.note-panel .note-buttons #edit-note-btn{
+    border: 2px solid #FF8FAF;
+    color: #FF8FAF;
+}
+
+.note-panel .note-buttons #save-note-btn{
+    color: white;
+    background-color: #FF8FAF;
+}
+
+
+
+.home-body .setting{
+    height: 80px;
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.home-body .setting p{
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.home-body .setting img{
+    position: absolute;
+    width: 18px;
+    right: 0%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.home-body .setting hr{
+    border: 1px solid #d1d1d1;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    margin-top: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.day-select-section{
+    width: 100%;
+    height: 80px;
+    border-bottom: 1.5px solid #dbdbdb;
+    padding: 10px 5px;
+    overflow-x: scroll;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center
+}
+
+.day-select-section::-webkit-scrollbar{
+    display: none;
+}
+
+
+.day-select-section .day-select-item{
+    display: inline-block;
+    min-width: 50px;
+    height: 80px;
+    margin: 0px 5px;  
+}
+
+.day-select-section .day-select-item .month{
+    text-align: center;
+}
+
+.day-select-section .day-select-item .day-select-button{
+    display: inline-block;
+    height: 50px;
+    min-width: 50px;
+    background: none;
+    border: 2px solid #FF8FAF;
+    border-radius: 50%;
+}
+
+.day-select-section .day-select-button .date{
+    font-family: "CM-Tattoo-Dragon";
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.day-select-section .day-select-button .day{
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.day-select-section .day-select-button{
+    color: #DE7A96;
+}
+
+.day-select-section .day-select-button.active{
+    border: none;
+    background-color: #FF8FAF;
+    color: white;
+}
+
+.data-display, .note-display{
+    width: 100%;
+    box-shadow: inset 0px 0px 11px -2px rgba(222,122,150,0.65);
+    border-radius: 30px;
+    padding: 20px;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.data-display .float-left{
+    float: left;
+    clear: left;
+}
+
+.data-display .float-right{
+    float: right;
+    clear: right;
+}
+
+.data-display .data-item{
+    margin-top: 20px;
+}
+
+.data-display .data-item-overview{
+    overflow: hidden;
+    position: relative;
+    height: 33px;
+}
+
+.data-display .data-item-overview .name{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.data-display .data-item-overview .total-time, .data-display .data-item-overview .add-remove-btn{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.data-display .data-item-detail{
+    border-top: 1px solid #cccccc;
+    padding-top: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.data-display #edit-btn, .data-display #edit-confirm-btn{
+    width: 100px;
+    height: 50px;
+    color: white;
+    background: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #FF8FAF;
+    float: right;
+    margin-top: 30px;
+}
+
+.note-display textarea{
+    width: 100%;
+    padding: 0px;
+    border: none;
+    resize: none;
+    outline: none;
+    color: #878787;;
+}
+
+.data-display #data-edit .data-item-overview button{
+    width: 50px;
+    height: 25px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #FF8FAF;
+    color: white;
+}
+
+.data-display #data-edit .data-item-details button{
+    width: 50px;
+    height: 25px;
+    background: none;
+    border: 2px solid #FF8FAF;
+    border-radius: 5px;
+    text-align: right;
+    padding-right: 2px;
+} 
+
+
+
+
+
