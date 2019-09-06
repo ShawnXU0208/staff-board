@@ -50,6 +50,7 @@ alerts are categorised into "temporary" and "regular"
 ### history data page
 On history data page, users are able to track last 40 days data from database.
 it shows staff's working time on each day, and are able to be modified.
+
 <img src="https://github.com/ShawnXU0208/staff-board/blob/master/image/5.jpeg" alt="drawing" width="200"/>
 
 ## device Support
